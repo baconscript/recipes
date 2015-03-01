@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Ryan Muller</title>
+    <style>
+        /* Space out content a bit */
+        body {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+
+        .bubble{
+            display: block;
+            /*background-color: #444;*/
+            color: white;
+            padding: 0;
+            margin-bottom: 30px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-color: black;
+            transition: padding-bottom 0.3s ease-out;
+            -webkit-transition: padding-bottom 0.3s ease-out;
+            overflow: visible;
+        }
+
+        .bubble a{
+            color: white;
+        }
+
+        .bubble small{
+            color: rgba(255,255,255,0.8);
+        }
+
+        .bubble a:hover{
+            color: #ddd;
+        }
+
+        .bubble::after{
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid #444;
+            border-top: 10px solid #444;
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            width: 0;
+            height: 0;
+            content: "";
+        }
+
+        .bubble h1,
+        .bubble h2{
+            margin: 0;
+            color: white;
+            padding: 10px 10px 12px;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .bubble h4{
+            position: absolute;
+            bottom: -24px;
+            right: 26px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bubble h4 small{
+            color: rgba(0,0,0,0.3);
+        }
+
+        /* Everything but the jumbotron gets side spacing for mobile first views */
+        .header,
+        .marketing,
+        .footer {
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+
+        /* Custom page header */
+        .header {
+          border-bottom: 1px solid #e5e5e5;
+        }
+        /* Make the masthead heading the same height as the navigation */
+        .header h3 {
+          padding-bottom: 19px;
+          margin-top: 0;
+          margin-bottom: 0;
+          line-height: 40px;
+        }
+
+        /* Custom page footer */
+        .footer {
+          padding-top: 19px;
+          color: #777;
+          border-top: 1px solid #e5e5e5;
+        }
+
+        code{
+          background-color:#dcdcdc;
+          border-radius: 3px;
+        }
+
+        pre code{
+          display:block;
+          padding: 4px;
+          border: 1px solid #bebebe;
+        }
+
+
+        /* Customize container */
+        @media (min-width: 768px) {
+          .container {
+            max-width: 730px;
+          }
+        }
+        .container-narrow > hr {
+          margin: 30px 0;
+        }
+
+        /* Main marketing message and sign up button */
+        .jumbotron {
+          text-align: center;
+          border-bottom: 1px solid #e5e5e5;
+        }
+        .jumbotron .btn {
+          padding: 14px 24px;
+          font-size: 21px;
+        }
+
+        /* Supporting marketing content */
+        .marketing {
+          margin: 40px 0;
+        }
+        .marketing p + h4 {
+          margin-top: 28px;
+        }
+
+        /* Responsive: Portrait tablets and up */
+        @media screen and (min-width: 768px) {Ò
+          /* Remove the padding we set earlier */
+          .header,
+          .marketing,
+          .footer {
+            padding-right: 0;
+            padding-left: 0;
+          }
+          /* Space out the masthead */
+          .header {
+            margin-bottom: 30px;
+          }
+          /* Remove the bottom border on the jumbotron for visual effect */
+          .jumbotron {
+            border-bottom: 0;
+          }
+        }
+
+    </style>
+
+    <link href="//baconscript.com/semantic.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body style="max-width:1200px;margin:auto;">
+
+    <div class="ui stackable page grid">
+      <div class="sixteen wide column">
+        <h3 class="text-muted">
+          <a href='/'>Ryan Muller</a>
+        </h3>
+          <div class="bubble"
+            style="background-image:url(/< %- cover %>);background-size:< %- cover==='sq.png'?'auto':'cover' %>;">
+              <h1 style="padding-left:8px;">Recipes</h1>
+          </div>
+          <% recipes.forEach(function(recipe){ %>
+          <h3>
+            <a href="<%- recipe.slug %>.html"><%- recipe.title %></a>
+            <small style="font-family:'News Cycle';font-size:50%;opacity:0.7;float:right;">
+              <%- recipe.dateString %>
+            </small>
+          </h3>
+          <% }); %>
+          </ul>
+      </div>
+    <div class="sixteen wide footer column">
+      <p>
+        &copy; Ryan Muller 2014,
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          CC-BY-SA 4.0
+        </a>
+        with exceptions. |
+        <a href="/about.html"><i class="fa fa-info-circle"></i></a>
+        <a href="https://twitter.com/_baconscript"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/baconscript"><i class="fa fa-github"></i></a>
+        <a href="https://keybase.io/baconscript"><i class="fa fa-key"></i></a>
+      </p>
+    </div><!-- /footer-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-49497378-1', 'muller.io');
+      ga('send', 'pageview');
+
+    </script>
+
+  </body>
+</html>

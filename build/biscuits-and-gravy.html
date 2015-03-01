@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+    <title>Ryan Muller</title>
+    <style>
+        /* Space out content a bit */
+        body {
+          padding-top: 20px;
+          padding-bottom: 20px;
+        }
+
+        .bubble{
+            display: block;
+            /*background-color: #444;*/
+            color: white;
+            padding: 0;
+            margin-bottom: 30px;
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            background-color: black;
+            transition: padding-bottom 0.3s ease-out;
+            -webkit-transition: padding-bottom 0.3s ease-out;
+            overflow: visible;
+        }
+
+        .bubble a{
+            color: white;
+        }
+
+        .bubble small{
+            color: rgba(255,255,255,0.8);
+        }
+
+        .bubble a:hover{
+            color: #ddd;
+        }
+
+        .bubble::after{
+            border-right: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 10px solid #444;
+            border-top: 10px solid #444;
+            position: absolute;
+            bottom: -20px;
+            right: 0;
+            width: 0;
+            height: 0;
+            content: "";
+        }
+
+        .bubble h1,
+        .bubble h2{
+            margin: 0;
+            color: white;
+            padding: 10px 10px 12px;
+            background-color: rgba(0,0,0,0.4);
+        }
+
+        .bubble h4{
+            position: absolute;
+            bottom: -24px;
+            right: 26px;
+            margin: 0;
+            padding: 0;
+        }
+
+        .bubble h4 small{
+            color: rgba(0,0,0,0.3);
+        }
+
+        /* Everything but the jumbotron gets side spacing for mobile first views */
+        .header,
+        .marketing,
+        .footer {
+          padding-right: 15px;
+          padding-left: 15px;
+        }
+
+        /* Custom page header */
+        .header {
+          border-bottom: 1px solid #e5e5e5;
+        }
+        /* Make the masthead heading the same height as the navigation */
+        .header h3 {
+          padding-bottom: 19px;
+          margin-top: 0;
+          margin-bottom: 0;
+          line-height: 40px;
+        }
+
+        /* Custom page footer */
+        .footer {
+          padding-top: 19px;
+          color: #777;
+          border-top: 1px solid #e5e5e5;
+        }
+
+        code{
+          background-color:#dcdcdc;
+          border-radius: 3px;
+        }
+
+        pre code{
+          display:block;
+          padding: 4px;
+          border: 1px solid #bebebe;
+        }
+
+
+        /* Customize container */
+        @media (min-width: 768px) {
+          .container {
+            max-width: 730px;
+          }
+        }
+        .container-narrow > hr {
+          margin: 30px 0;
+        }
+
+        /* Main marketing message and sign up button */
+        .jumbotron {
+          text-align: center;
+          border-bottom: 1px solid #e5e5e5;
+        }
+        .jumbotron .btn {
+          padding: 14px 24px;
+          font-size: 21px;
+        }
+
+        /* Supporting marketing content */
+        .marketing {
+          margin: 40px 0;
+        }
+        .marketing p + h4 {
+          margin-top: 28px;
+        }
+        .recipe-item{
+          border-bottom: 1px dotted #dcdcdc;
+          transition: border-bottom .1s;
+          color: black;
+        }
+        .recipe-item.active{
+          border-bottom: 1px solid black;
+        }
+
+        /* Responsive: Portrait tablets and up */
+        @media screen and (min-width: 768px) {
+          /* Remove the padding we set earlier */
+          .header,
+          .marketing,
+          .footer {
+            padding-right: 0;
+            padding-left: 0;
+          }
+          /* Space out the masthead */
+          .header {
+            margin-bottom: 30px;
+          }
+          /* Remove the bottom border on the jumbotron for visual effect */
+          .jumbotron {
+            border-bottom: 0;
+          }
+        }
+
+    </style>
+
+    <link href="//baconscript.com/semantic.min.css" rel="stylesheet">
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+  </head>
+
+  <body style="max-width:1200px;margin:auto;">
+
+    <div class="ui stackable page grid">
+      <div class="sixteen wide column">
+        <h3 class="text-muted">
+          <a href='/'>Ryan Muller</a>
+        </h3>
+              <h1 style="padding-left:8px;">Vegetarian Biscuits and Gravy</h1>
+              <h4 style="padding-left:8px;"><small class="text-muted">February 26th, 2015</small></h4>
+          <p>Recently, I went to <a href="http://thefriendlytoast.com/">The Friendly Toast</a> in Cambridge and had biscuits and gravy for the first time in my life. I have no idea how I went this long without having such a classic meal, but fortunately fate seems to have been on my side that day. It&#39;s now my #1 favorite breakfast.</p>
+<p>My fianc&eacute;e recently became vegetarian, so I knew when I made this at home I&#39;d have to use vegetarian sausage. Veggie sausage is surprisingly good. I think it has to do with the fact that 90% of the appeal of sausage patties comes from the spices that are included. I tried some while I was heating it up in the pan and was surprised at how much like real sausage it tasted.</p>
+
+          <h2>Ingredients</h2>
+          <ul>
+          
+               <li><span class="recipe-item" data-which="prepackaged biscuits">6 prepackaged biscuits</span></li>
+          
+               <li><span class="recipe-item" data-which="canola oil">1 tbsp canola oil</span></li>
+          
+               <li><span class="recipe-item" data-which="vegetarian sausage patties">8 oz vegetarian sausage patties</span></li>
+          
+               <li><span class="recipe-item" data-which="low-fat milk">3 c low-fat milk</span></li>
+          
+               <li><span class="recipe-item" data-which="all-purpose flour">&frac14; c all-purpose flour</span></li>
+          
+               <li><span class="recipe-item" data-which="salt">&frac12; tsp salt</span></li>
+          
+               <li><span class="recipe-item" data-which="freshly ground black pepper">&frac14; tsp freshly ground black pepper</span></li>
+          
+          </ul>
+        <h1 id="preparation">Preparation</h1>
+<p>Prepare the <span class='recipe-item' data-which='prepackaged biscuits'>biscuits</span> according to the instructions on the box.</p>
+<p>Heat the <span class='recipe-item' data-which='canola oil'>canola oil</span> in a <span class='recipe-item' data-which='large non-stick frying pan'>large non-stick frying pan</span>. 
+Make sure that the <span class='recipe-item' data-which='large non-stick frying pan'>pan</span> can hold at least 3 cups of liquid, because eventually the <span class='recipe-item' data-which='low-fat milk'>milk</span> is going into it.
+Add the <span class='recipe-item' data-which='vegetarian sausage patties'>sausage patties</span> and cook until they&#39;re browned. 
+Remove from heat and allow to cool until they&#39;re comfortable to touch. 
+Crumble the <span class='recipe-item' data-which='vegetarian sausage patties'>patties</span> into &frac12;-inch pieces and return them to the <span class='recipe-item' data-which='large non-stick frying pan'>pan</span>.</p>
+<p>Lightly spoon <span class='recipe-item' data-which='all-purpose flour'>flour</span> into a <span class='recipe-item' data-which='dry measuring cup'>dry measuring cup</span> and level with a knife. 
+Combine <span class='recipe-item' data-which='all-purpose flour'>flour</span> and <span class='recipe-item' data-which='low-fat milk'>milk</span> in a <span class='recipe-item' data-which='large mixing bowl'>large mixing bowl</span>, stirring with a <span class='recipe-item' data-which='whisk or fork'>whisk or fork</span> until smooth.
+Add milk mixture, <span class='recipe-item' data-which='salt'>salt</span>, and <span class='recipe-item' data-which='freshly ground black pepper'>freshly ground black pepper</span> to <span class='recipe-item' data-which='large non-stick frying pan'>pan</span>; bring to a boil over medium-high heat.
+Reduce heat and simmer for 3 minutes or until it&#39;s thick (drips slowly from <span class='recipe-item' data-which='ladle'>ladle</span>).</p>
+<p>Place two <span class='recipe-item' data-which='prepackaged biscuits'>biscuits</span> on each plate, and put the <span class='recipe-item' data-which='large non-stick frying pan'>pan</span> with the gravy in the middle of the table with the <span class='recipe-item' data-which='ladle'>ladle</span> so people can put gravy on their own biscuits.</p>
+<h2 id="leftovers">Leftovers</h2>
+<p>If you store the gravy and biscuits separately in the fridge, you can keep it for a day or two afterwards. The gravy will thicken, but just stir in about a tablespoon of water per half-cup of gravy remaining. For two biscuits with a half-cup of gravy, microwave on high for 2&frac12; minutes.</p>
+
+      </div>
+      <div class="sixteen wide column"><div id="disqus_thread"></div></div>
+    <script type="text/javascript">
+        var disqus_shortname = 'ryanmullerio';
+        var disqus_identifier = document.location.pathname;
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+    <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    <div class="sixteen wide footer column">
+      <p>
+        &copy; Ryan Muller 2014,
+        <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">
+          CC-BY-SA 4.0
+        </a>
+        with exceptions. |
+        <a href="/about.html"><i class="fa fa-info-circle"></i></a>
+        <a href="https://twitter.com/_baconscript"><i class="fa fa-twitter"></i></a>
+        <a href="https://github.com/baconscript"><i class="fa fa-github"></i></a>
+        <a href="https://keybase.io/baconscript"><i class="fa fa-key"></i></a>
+      </p>
+    </div><!-- /footer-->
+
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-49497378-1', 'muller.io');
+      ga('send', 'pageview');
+
+    </script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script>
+      $(function(){
+          $('.recipe-item').each(function(){
+            var $item = $(this),
+                which = $item.data('which');
+            $item.on('mouseover', function(){
+              $('[data-which="'+which+'"]').addClass('active');
+            });
+            $item.on('mouseout', function(){
+              $('[data-which="'+which+'"]').removeClass('active');
+            });
+          });
+      });
+    </script>
+
+  </body>
+</html>
